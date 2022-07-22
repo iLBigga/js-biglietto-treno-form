@@ -38,23 +38,25 @@ submitElement.addEventListener('click', function () {
         // Calcolo costo biglietto
         price = 0.21 * userKm
         // Calcolo sconto
-        const calcSale = price * userRange 
-        const finalPrice = (price - calcSale).toFixed(2)
-        // Inserisco dati in HTML
+        const calcSale = price * userRange
+        // Applico sconto
+        if (userRange != 1) {
+            const finalPrice = (price - calcSale).toFixed(2)
+            ticketPrice.innerHTML = finalPrice + '&euro;'
+        } else {
+            const finalPrice = price.toFixed(2)
+            ticketPrice.innerHTML = finalPrice + '&euro;'
+        }
+        // inserisco testo
         ticiketUser.innerHTML = userName   
-        if (userRange === 0) {
+        if (userRange === 1) {
             ticketSale.innerHTML = 'Biglietto Standard'
         } else {
             ticketSale.innerHTML = 'Biglietto Scontato'
         }
         ticketCoach.innerHTML = Math.floor(Math.random() * 10 + 1);
         ticketCP.innerHTML = Math.floor(Math.random() * 100000 );
-        ticketPrice.innerHTML = finalPrice + '&euro;'
-
-        stampa(calcSale)
-        stampa(finalPrice)
-        stampa(userRange)
-        stampa(price)
+        
     
     } else {
         alert('Alcuni dati sono errati')
