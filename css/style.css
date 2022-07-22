@@ -1,0 +1,50 @@
+:root {
+    --pink:  #B91450;
+    --light-grey:  #cccccc;  
+    --orange: #F2A15A;
+    --grey: #808080
+}
+
+
+body {
+    background-color: var(--pink)!important; 
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.form_section span {
+    display: block;
+    color: var(--pink);
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-size: large;
+}
+
+input, select {
+    border: 2px solid var(--pink);
+    border-radius: 10px;
+    padding: 0.4rem;
+    text-align: center;
+}
+
+
+.custom_button {
+    background-color: var(--light-grey);
+    color: var(--pink);
+    font-weight: bold;
+    text-transform: uppercase;;
+}
+
+.custom_button:hover {
+    border: 2px solid salmon;
+}
+
+.form_result .col p:first-child {
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: large;
+}
+
