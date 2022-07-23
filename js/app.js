@@ -10,7 +10,7 @@ let price, userName, userKm, userRange
 
 submitElement.addEventListener('click', function () {
     //Ricevo dati nome
-    userName = document.querySelector('input[name="username"')
+    userName = document.querySelector('input[name="username"]')
     userName = userName.value
     // Ricevo dati km
     userKm = document.querySelector('input[name="distance"]')
