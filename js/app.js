@@ -10,7 +10,7 @@ let price, userName, userKm, userRange
 
 submitElement.addEventListener('click', function () {
     //Ricevo dati nome
-    userName = document.querySelector('input[name="username"]')
+    userName = document.querySelector('input[name="username"')
     userName = userName.value
     // Ricevo dati km
     userKm = document.querySelector('input[name="distance"]')
@@ -38,16 +38,9 @@ submitElement.addEventListener('click', function () {
         // Calcolo costo biglietto
         price = 0.21 * userKm
         // Calcolo sconto
-        const calcSale = price * userRange
-        // Applico sconto
-        if (userRange != 1) {
-            const finalPrice = (price - calcSale).toFixed(2)
-            ticketPrice.innerHTML = finalPrice + '&euro;'
-        } else {
-            const finalPrice = price.toFixed(2)
-            ticketPrice.innerHTML = finalPrice + '&euro;'
-        }
-        // inserisco testo
+        const calcSale = price * userRange 
+        const finalPrice = (price - calcSale).toFixed(2)
+        // Inserisco dati in HTML
         ticiketUser.innerHTML = userName   
         if (userRange === 1) {
             ticketSale.innerHTML = 'Biglietto Standard'
@@ -56,7 +49,12 @@ submitElement.addEventListener('click', function () {
         }
         ticketCoach.innerHTML = Math.floor(Math.random() * 10 + 1);
         ticketCP.innerHTML = Math.floor(Math.random() * 100000 );
-        
+        ticketPrice.innerHTML = finalPrice + '&euro;'
+
+        //stampa(calcSale)
+        //stampa(finalPrice)
+        //stampa(userRange)
+        //stampa(price)
     
     } else {
         alert('Alcuni dati sono errati')
