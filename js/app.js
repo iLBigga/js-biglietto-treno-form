@@ -39,10 +39,11 @@ submitElement.addEventListener('click', function () {
         price = 0.21 * userKm
         // Calcolo sconto
         const calcSale = price * userRange 
+        // Applicazione sconto al totale
         const finalPrice = (price - calcSale).toFixed(2)
         // Inserisco dati in HTML
         ticiketUser.innerHTML = userName   
-        if (userRange === 1) {
+        if (userRange === 0) {
             ticketSale.innerHTML = 'Biglietto Standard'
         } else {
             ticketSale.innerHTML = 'Biglietto Scontato'
